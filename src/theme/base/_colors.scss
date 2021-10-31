@@ -1,0 +1,51 @@
+@use 'base/palettes' as *;
+// stylelint-disable plugin-color/color-types
+// !IMPORANT IF CHANGING PALETTE COLORS UPDATE COLOR-PALETTES.CONSTANTS.TS AS WELL
+$white: #FFFFFF;
+
+$black: #252525;
+$pure-black: #000000;
+$dark-black: #0F0F0F;
+
+$gray: #C4C4C4;
+$dark-gray: #676767;
+$light-gray: #F2F2F2;
+$very-light-gray: #FCFCFC;
+
+$navy: #336699;
+$medium-navy: #D4E9FF;
+$light-navy: #F7FBFF;
+
+$red: #E63946;
+$medium-red: #FFB2B8;
+$light-red: #FFF5F6;
+
+$blue: #1FBCFF;
+$medium-blue: #E0F6FF;
+$light-blue: #F5FCFF;
+
+$yellow: #F7D02F;
+$medium-yellow: #F7EDC3;
+$light-yellow: #FFFDF5;
+
+$green: #2DC171;
+$medium-green: #BAFFDA;
+$light-green: #EBFFF4;
+
+$primary: map-get($nmap-frontend-primary, 500);
+$medium-primary: map-get($nmap-frontend-primary, 300);
+$light-primary: map-get($nmap-frontend-primary, 100);
+
+$secondary: map-get($nmap-frontend-accent, 500);
+$medium-secondary: map-get($nmap-frontend-accent, 300);
+$light-secondary: map-get($nmap-frontend-accent, 100);
+
+.dark-mode {
+  $primary: map-get($nmap-frontend-dark-primary, 500);
+  $medium-primary: map-get($nmap-frontend-dark-primary, 300);
+  $light-primary: map-get($nmap-frontend-dark-primary, 100);
+
+  $secondary: map-get($nmap-frontend-dark-accent, 500);
+  $medium-secondary: map-get($nmap-frontend-dark-accent, 300);
+  $light-secondary: map-get($nmap-frontend-dark-accent, 100);
+}
