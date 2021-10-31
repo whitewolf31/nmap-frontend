@@ -1,0 +1,64 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-plugin-color"],
+  "ignoreFiles": ["node_modules/*", "README.md"],
+  "rules": {
+    "indentation": [
+      2,
+      {
+        "except": ["value"],
+        "indentInsideParens": "twice"
+      }
+    ],
+    "color-hex-case": "upper",
+    "color-hex-length": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "at-rule-disallowed-list": ["import"],
+    "at-rule-empty-line-before": null,
+    "block-opening-brace-newline-after": "always",
+    "block-closing-brace-empty-line-before": "never",
+    "function-parentheses-space-inside": null,
+    "max-nesting-depth": 6,
+    "selector-max-compound-selectors": 10,
+    "max-empty-lines": 1,
+    "selector-no-qualifying-type": null,
+    "order/properties-alphabetical-order": null,
+    "order/order": null,
+    "string-quotes": "double",
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "no-eol-whitespace": true,
+    "no-duplicate-selectors": true,
+    "selector-class-pattern": "^([a-z][a-z0-9]*(-[a-z0-9]+)*|mat-column-[a-zA-Z]*)$",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ],
+    "declaration-property-value-disallowed-list": [
+      {
+        "/^(margin|padding)/": ["/(?<!\\b(2|4|8|16|24|32|40|48|56|64|72|80|88|96|104|112|120|128))(px)/"]
+      }
+    ],
+    "unit-disallowed-list": ["rem"],
+    "plugin-color/color-types": {
+      "mode": "require",
+      "types": ["rgba"]
+    },
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": ["box-orient"]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": ["box"]
+      }
+    ]
+  },
+  "formatter": "./stylelint-formatter.js",
+  "extends": "stylelint-config-sass-guidelines"
+}
